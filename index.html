@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>FOSDEM 2020</title>
+
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/black.css">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/monokai.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section><h1>FOSDEM</h1></section>
+                <section>
+                    <section><h2>CAD/CAM</h2></section>
+                    <section><h3>FreeCAD</h3>
+                        <br/>
+                        Written by architects and engineers.
+                        <br/>
+                        CAM features.
+                    </section>
+                    <section><h3>Open Cascade</h3>
+                        <br/>
+                        Trolled them a bit.
+                    </section>
+                    <section><h3>cadquery</h3>
+                        <pre>
+import cadquery as cq
+
+result = (cq.Workplane(cq.Plane.XY())
+          .box(4,2, 0.5)
+          .faces(">Z")
+          .workplane()
+          .rect(3.5, 1.5, forConstruction=True)
+          .vertices()
+          .cboreHole(0.125, 0.25, 0.125, depth=None))
+
+show_object(result)
+                        </pre>
+                        <img src="cbore.png" width="30%"/>
+                    </section>
+                    <section><h3>deal.II</h3>
+                        <br/>
+                        Incumbent disadvantages.
+                    </section>
+                </section>
+                <section>
+                    <section><h2>Tinfoil Hat Gang</h2>
+                        <br/>
+                        <img src="eagle.jpg" width="50%"/>
+                    </section>
+                    <section><h3>GNUnet</h3>
+                        <br/>
+                        Rad web-of-trust name system.
+                    </section>
+                    <section><h3>Tor</h3>
+                        <br/>
+                        Easier for new contributors.
+                        <br/>
+                        Anti-censorship features.
+                    </section>
+                    <section><h3>ProtonMail</h3>
+                        <br/>
+                        What if ProtonMail get hacked?
+                    </section>
+                    <section><h3>Edgy Chat Apps</h3>
+                        <br/>
+                        Briar <a href="https://briarproject.org/">https://briarproject.org/</a>
+                        <br/>
+                        Katzenpost <a href="https://katzenpost.mixnetworks.org/">https://katzenpost.mixnetworks.org/</a>
+                        <br/>
+                        Cwtch <a href="https://cwtch.im/">https://cwtch.im/</a>
+                        <br/>
+                    </section>
+                    <section><h3>Matrix</h3>
+                        <br/>
+                        @tvf:matrix.org
+                    </section>
+                </section>
+                <section>
+                    <section><h2>Misc</h2></section>
+                    <section>TinyGo</section>
+                    <section>Shrivelling Worlds
+                        <br/>
+                        <img src="map.jpg" width="60%"/>
+                    </section>
+                </section>
+            </div>
+        </div>
+
+        <script src="js/reveal.js"></script>
+
+        <script>
+            // More info about config & dependencies:
+            // - https://github.com/hakimel/reveal.js#configuration
+            // - https://github.com/hakimel/reveal.js#dependencies
+            Reveal.initialize({
+                              hash: true,
+                              dependencies: [
+                                  { src: 'plugin/markdown/marked.js' },
+                                  { src: 'plugin/markdown/markdown.js' },
+                                  { src: 'plugin/highlight/highlight.js' },
+                                  { src: 'plugin/notes/notes.js', async: true }
+                              ]
+            });
+        </script>
+    </body>
+</html>
